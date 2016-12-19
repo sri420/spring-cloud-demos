@@ -1,0 +1,5 @@
+endpoints:
+  actuator:
+    enabled: true
+server:
+  port: 54321
