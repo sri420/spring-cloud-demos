@@ -1,0 +1,15 @@
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+server:
+  port: 54321
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    env:
+      enabled: true
+
