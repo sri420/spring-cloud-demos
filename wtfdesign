@@ -1,0 +1,106 @@
+Name of Excel File
+Active Sheet in the File
+No of Sheets in the File
+Column Headers per Sheet
+
+
+Name of CSV File
+Column Headers in CSV File
+
+
+
+XML File
+List of Unique Elements with attributes in the File
+
+<Employee>
+	<firstName></firstName>
+	<lastName></lastName>
+	...
+</Employee?
+<Employee>
+    <name first='' last='' middle=''/>
+	<address doorno='' streetname='' areaname='' county='' zipcode=''/>
+	
+</Employee?
+
+
+"employee":[
+		{
+			"firstname":"",
+			"lastname:"",
+			"middlename:""
+			"address":{
+				"doorno":"",
+				"streetname":"",
+				"areaname":"",
+				"county":"",
+				"zipcode":""
+			}
+		},
+		{
+		}
+]
+
+
+
+=====
+
+
+
+Provide User Recommendations
+=============================
+Input:
+	(1) Master Target DB Fields:{"name","dob","city","gender","salary"}
+	(2) Known aliases for each of the target db fields 
+			"name":["firstname","fullname"]
+			"dob":["dateofbirth","birthdate"]
+			"city":["areaname","countyname"]
+			"gender":"sex"
+			"salary":["income","earnings"]
+	(3) List of fields extracted from uploaded file
+		[
+			"firstName","lastname","middlename","dateofbirth","gender","earnings"
+		]
+	
+	(4)User Identity
+Output:
+	[
+		"name":{
+					"suggestedfield": "firstname",
+					"otherfields": ["lastname","middlename"]
+				},
+		"dob": {
+					"suggestedfield":"dateofbirth",
+					"otherfields":"none"
+		},
+		"city":{
+					"suggestedfield": "firstname",
+					"otherfields": ["lastname","middlename"]
+		},
+		"gender":{
+					"suggestedfield": "gender",
+					"otherfields": [All Extracted fields]
+		},
+		"salary":{
+					"suggestedfield": "earnings",
+					"otherfields": 'None'
+		}
+	]				
+			
+
+Capture User's Preference
+-------------------------
+Input:
+		"name":"lastname",
+		"dob":"dateofbirth",
+		"city":
+		"gender":"gender" ,
+		"salary":"earnings"
+		"userIdentity:"user001"
+		"timestamp":""
+				
+					
+		
+		
+	
+		
